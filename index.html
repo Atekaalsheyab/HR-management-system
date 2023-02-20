@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style/style.css"> 
+    <link rel="stylesheet" href="./style/style.css">
 
     <title>HR-management-system </title>
 </head>
@@ -26,34 +26,73 @@
         </div>
     </header>
     <main>
+        <br>
+        <br>
 
+        <form id="Empform">
+            <fieldset>
+                <legend>Add new Employee </legend>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter full name">
+                <br>
+                <br>
+                <br>
+
+                <label for="Dep">Department: </label>
+                <select name="Dep" id="Dep">
+                    <option value="administration">Administration</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Finance">Finance</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <label for="Level">Level: </label>
+                <select name="level" id="Level">
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-Senior">Mid-Senior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <label for="imgurl">Image URL: </label>
+                <input type="text" name="imgurl" id="imgurl">
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Add">
+            </fieldset>
+        </form>
     </main>
-    <script src="./apps.js"></script>
 
     <footer>
         <div class="footer">
-        <div class="row">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-youtube"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                Copyright © 2023 - All rights reserved
+            </div>
         </div>
-        
-        <div class="row">
-        <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Our Services</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Career</a></li>
-        </ul>
-        </div>
-        
-        <div class="row">
-         Copyright © 2023  - All rights reserved 
-        </div>
-        </div>
-        </footer>
+        <script src="./apps.js"></script>
+
+    </footer>
 
 
 </body>
