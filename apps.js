@@ -2,18 +2,18 @@
 let max;
 let min;
 let EmpArr = [];
-let sumAdmin= 0; 
-let sumDev=0; 
-let sumMar=0; 
-let sumFin=0; 
-let AvgAdmin=0; 
-let AvgDev=0; 
-let AvgMar=0;
-let AvgFin=0; 
-let AdminCount=0; 
-let DevCount=0; 
-let FinCount=0;
-let MarCount=0; 
+let sumAdmin = 0;
+let sumDev = 0;
+let sumMar = 0;
+let sumFin = 0;
+let AvgAdmin = 0;
+let AvgDev = 0;
+let AvgMar = 0;
+let AvgFin = 0;
+let AdminCount = 0;
+let DevCount = 0;
+let FinCount = 0;
+let MarCount = 0;
 function Employee(FullName, Department, Level, Image_URL, Salary) {
     this.EmployeeId = this.generateId;
     this.FullName = FullName;
@@ -21,7 +21,7 @@ function Employee(FullName, Department, Level, Image_URL, Salary) {
     this.Level = Level;
     this.Image_URL = Image_URL;
     this.Salary = this.calculateSalary;
-    EmpArr.push(this); 
+    EmpArr.push(this);
 }
 
 Employee.prototype.calculateSalary = function () {
@@ -86,16 +86,13 @@ const divEl2 = document.createElement('div');
 const divEl3 = document.createElement('div');
 const divEl4 = document.createElement('div');
 
-AvgAdmin=sumAdmin/AdminCount;
-AvgDev=sumDev/DevCount;
-AvgFin=sumFin/FinCount;
-AvgMar=sumMar/MarCount;
+
 
 function render() {
-    divEl1.innerHTML="";
-    divEl2.innerHTML="";
-    divEl3.innerHTML="";
-    divEl4.innerHTML="";
+    divEl1.innerHTML = "";
+    divEl2.innerHTML = "";
+    divEl3.innerHTML = "";
+    divEl4.innerHTML = "";
 
 
     getEmp();
@@ -103,11 +100,10 @@ function render() {
         EmpArr = [];
         console.log(EmpArr.length);
     }
-    for (let i= 0; i < EmpArr.length; i++) {
+    for (let i = 0; i < EmpArr.length; i++) {
 
-        switch ( EmpArr[i].Department) {
+        switch (EmpArr[i].Department) {
             case "Administration":
-                AdminCount++;
                 divEl1.id = 'card';
                 secEl1.appendChild(divEl1);
                 const imgEl1 = document.createElement('img');
@@ -120,24 +116,22 @@ function render() {
                 divEl1.appendChild(divChEl1);
                 const p1El1 = document.createElement('p');
                 divChEl1.appendChild(p1El1);
-                p1El1.textContent = `Name: ${ EmpArr[i].FullName} - ID: ${ EmpArr[i].EmployeeId}`
+                p1El1.textContent = `Name: ${EmpArr[i].FullName} - ID: ${EmpArr[i].EmployeeId}`
                 const p2El1 = document.createElement('p');
                 divChEl1.appendChild(p2El1);
-                p2El1.textContent = `Department: ${ EmpArr[i].Department} - Level: ${ EmpArr[i].Level}`;
+                p2El1.textContent = `Department: ${EmpArr[i].Department} - Level: ${EmpArr[i].Level}`;
                 const p3El1 = document.createElement('p');
                 divChEl1.appendChild(p3El1);
-                p3El1.textContent = `${ EmpArr[i].Salary}`;
+                p3El1.textContent = `${EmpArr[i].Salary}`;
                 const brEl = document.createElement('br');
-                sumAdmin+=EmpArr[i].Salary; 
                 break;
 
             case "Marketing":
-                MarCount++;
                 divEl2.id = 'card';
                 secEl2.appendChild(divEl2);
                 const imgEl2 = document.createElement('img');
                 divEl2.appendChild(imgEl2);
-                imgEl2.setAttribute('src',  EmpArr[i].Image_URL);
+                imgEl2.setAttribute('src', EmpArr[i].Image_URL);
                 imgEl2.width = "200";
                 imgEl2.height = "200";
                 const divChEl2 = document.createElement('div');
@@ -147,25 +141,23 @@ function render() {
                 divChEl2.appendChild(h4El2);
                 const p1El2 = document.createElement('p');
                 divChEl2.appendChild(p1El2);
-                p1El2.textContent = `Name: ${ EmpArr[i].FullName} - ID: ${ EmpArr[i].EmployeeId}`
+                p1El2.textContent = `Name: ${EmpArr[i].FullName} - ID: ${EmpArr[i].EmployeeId}`
                 const p2El2 = document.createElement('p');
                 divChEl2.appendChild(p2El2);
-                p2El2.textContent = `Department: ${ EmpArr[i].Department} - Level: ${ EmpArr[i].Level}`;
+                p2El2.textContent = `Department: ${EmpArr[i].Department} - Level: ${EmpArr[i].Level}`;
                 const p3El2 = document.createElement('p');
                 divChEl2.appendChild(p3El2);
-                p3El2.textContent = `${ EmpArr[i].Salary}`;
+                p3El2.textContent = `${EmpArr[i].Salary}`;
                 const brEl2 = document.createElement('br');
-                sumMar+=EmpArr[i].Salary; 
 
                 break;
 
             case "Development":
-                DevCount++;
                 divEl3.id = 'card';
                 secEl3.appendChild(divEl3);
                 const imgEl3 = document.createElement('img');
                 divEl3.appendChild(imgEl3);
-                imgEl3.setAttribute('src',  EmpArr[i].Image_URL);
+                imgEl3.setAttribute('src', EmpArr[i].Image_URL);
                 imgEl3.width = "200";
                 imgEl3.height = "200";
                 const divChEl3 = document.createElement('div');
@@ -173,25 +165,23 @@ function render() {
                 divEl3.appendChild(divChEl3);
                 const p1El3 = document.createElement('p');
                 divChEl3.appendChild(p1El3);
-                p1El3.textContent = `Name: ${ EmpArr[i].FullName} - ID: ${ EmpArr[i].EmployeeId}`
+                p1El3.textContent = `Name: ${EmpArr[i].FullName} - ID: ${EmpArr[i].EmployeeId}`
                 const p2El3 = document.createElement('p');
                 divChEl3.appendChild(p2El3);
-                p2El3.textContent = `Department: ${ EmpArr[i].Department} - Level: ${ EmpArr[i].Level}`;
+                p2El3.textContent = `Department: ${EmpArr[i].Department} - Level: ${EmpArr[i].Level}`;
                 const p3El3 = document.createElement('p');
                 divChEl3.appendChild(p3El3);
-                p3El3.textContent = `${ EmpArr[i].Salary}`;
+                p3El3.textContent = `${EmpArr[i].Salary}`;
                 const brEl3 = document.createElement('br');
-                sumDev+=EmpArr[i].Salary; 
 
                 break;
 
             case "Finance":
-                FinCount++;
                 divEl4.id = 'card';
                 secEl4.appendChild(divEl4);
                 const imgEl4 = document.createElement('img');
                 divEl4.appendChild(imgEl4);
-                imgEl4.setAttribute('src',  EmpArr[i].Image_URL);
+                imgEl4.setAttribute('src', EmpArr[i].Image_URL);
                 imgEl4.width = "200";
                 imgEl4.height = "200";
                 const divChEl4 = document.createElement('div');
@@ -199,15 +189,14 @@ function render() {
                 divEl4.appendChild(divChEl4);
                 const p1El4 = document.createElement('p');
                 divChEl4.appendChild(p1El4);
-                p1El4.textContent = `Name: ${ EmpArr[i].FullName} - ID: ${ EmpArr[i].EmployeeId}`
+                p1El4.textContent = `Name: ${EmpArr[i].FullName} - ID: ${EmpArr[i].EmployeeId}`
                 const p2El4 = document.createElement('p');
                 divChEl4.appendChild(p2El4);
-                p2El4.textContent = `Department: ${ EmpArr[i].Department} - Level: ${ EmpArr[i].Level}`;
+                p2El4.textContent = `Department: ${EmpArr[i].Department} - Level: ${EmpArr[i].Level}`;
                 const p3El4 = document.createElement('p');
                 divChEl4.appendChild(p3El4);
-                p3El4.textContent = `${ EmpArr[i].Salary}`;
+                p3El4.textContent = `${EmpArr[i].Salary}`;
                 const brEl4 = document.createElement('br');
-                sumFin+=EmpArr[i].Salary; 
             default:
                 break;
         }
@@ -231,7 +220,7 @@ function addNewEmployee(event) {
 
     let jsonEempArr = JSON.stringify(EmpArr);
     localStorage.setItem("allEmp", jsonEempArr);
-    render(); 
+    render();
 
 
 }
